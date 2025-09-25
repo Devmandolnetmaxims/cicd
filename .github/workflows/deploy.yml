@@ -21,9 +21,8 @@ jobs:
           host: ${{ secrets.DEV_SERVER_IP }}
           username: ${{ secrets.DEV_SSH_USER }}
           password: ${{ secrets.DEV_SSH_PASSWORD }}
-          port: 21
           source: "./"
-          target: "/home2/netma2db/public_html/cicd"
+          target: "/home/imaxims/public_html/cicd"
 
       - name: Run Laravel Commands on Dev
         uses: appleboy/ssh-action@v0.1.10
