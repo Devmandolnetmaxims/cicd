@@ -3,7 +3,7 @@ name: 🚀 Deploy Laravel App via FTP
 on:
   push:
     branches:
-      - main   # change to dev, staging, or prod as needed
+      - dev   # change to dev, staging, or prod as needed
 
 jobs:
   ftp-deploy:
