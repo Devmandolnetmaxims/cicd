@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.DEV_SSH_USER }}
           password: ${{ secrets.DEV_SSH_PASSWORD }}
           script: |
-            cd /var/www/dev-app
+            cd /home/imaxims/public_html/cicd
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan config:clear
