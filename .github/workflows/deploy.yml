@@ -21,4 +21,4 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./       # local repo path
-          server-dir: /home2/netma2db/public_html/mindovermatter.appswatt.com   # remote path on server
+          server-dir: /home2/netma2db/public_html/mindovermatter.appswatt.com/   # remote path on server
