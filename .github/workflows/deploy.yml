@@ -20,5 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           local_path: ./                             # local repo root
-          remote_path: /home2/netma2db/public_html/mindovermatter.appswatt.com/
+          remote_path: /public_html/mindovermatter.appswatt.com/
           sftp_only: true
