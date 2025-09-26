@@ -35,3 +35,4 @@ jobs:
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
             php artisan optimize:clear
+          use_insecure_cipher: true
