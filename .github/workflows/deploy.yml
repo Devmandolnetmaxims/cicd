@@ -1,24 +1,24 @@
-name: 🚀 Deploy Laravel App via FTP
+name: 🚀 Deploy Laravel App via SFTP
 
 on:
   push:
     branches:
-      - dev   # change to dev, staging, or prod as needed
+      - dev   # change this to dev, staging, or prod as needed
 
 jobs:
-  ftp-deploy:
+  sftp-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload files to server via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}          # your SFTP server
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          protocol: sftp
-          local-dir: ./       # local repo path
-          server-dir: /home2/netma2db/public_html/mindovermatter.appswatt.com/   # remote path on server
+          local_path: ./                             # local repo root
+          remote_path: /home2/netma2db/public_html/mindovermatter.appswatt.com/
+          sftp_only: true
